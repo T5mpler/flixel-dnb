@@ -1008,6 +1008,7 @@ class FlxText extends FlxSprite
 			drawTextFieldTo(graphic.bitmap);
 		}
 		
+		_regen = false;
 		resetFrame();
 	}
 
