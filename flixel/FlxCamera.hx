@@ -1657,6 +1657,9 @@ class FlxCamera extends FlxBasic
 		}
 		else
 		{
+			if (FxAlpha == 0)
+				return;
+
 			final targetGraphics = (graphics == null) ? canvas.graphics : graphics;
 
 			targetGraphics.overrideBlendMode(null);
@@ -2163,6 +2166,7 @@ class FlxCamera extends FlxBasic
 
 		updateScrollRect();
 		updateInternalSpritePositions();
+		updateFlashSpritePosition();
 
 		FlxG.cameras.cameraResized.dispatch(this);
 	}
